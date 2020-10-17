@@ -4,8 +4,8 @@
 <?php
 
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = "coendenh_partygames";
+    $password = "coendenheijer090";
     $dbname = "partygames";
 
     // Create connection
