@@ -13,7 +13,7 @@
 
 
     <?php
-        $url = 'http://localhost/partygamezzz/';
+        $url = 'http://coendenheijer.nl/partygames/';
     ?>
 
 </head>
