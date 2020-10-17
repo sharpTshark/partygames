@@ -1,0 +1,402 @@
+/* --------------------------------------- general */
+
+:root {
+    --white: #ffffff;
+    --dgray: #272727;
+    --black: #121212;
+    --pricolor: #fbc01a;
+}
+
+
+body {
+    overflow-x: hidden;
+    background-color: var(--black);
+    margin: 60px 0px;
+    padding-left: 0px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* --------------------------------------- Navigation */
+
+
+nav {
+    z-index: 4;
+    background-color: var(--dgray);
+    top: 60px;
+    position: fixed;
+    left: -200;
+    transition: 0.5s;
+    border-right: 5px solid var(--pricolor);
+    border-bottom: 5px solid var(--pricolor);
+    border-radius: 20px 0px;
+}
+
+nav:hover {
+    left: -20;
+}
+
+
+.nav-block {
+    background-color: var(--pricolor);
+    width: 240px;
+    padding: 5px;
+    transition: 0.4s;
+    /* visibility: hidden; */
+}
+.nav-block a {
+    color: var(--black);
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.nav-block:hover {
+    background-color: var(--white);
+}
+
+#nav-icon {
+    float: right;
+    padding: 5px;
+}
+
+.nav-block-open {
+    z-index: 5;
+    position: fixed;
+    left: 0;
+    top: 0px;
+    background-color: var(--dgray);
+    width: 101%;
+    height: 65px;
+    border-bottom: 5px solid var(--pricolor);
+}
+
+#user-name {
+    color: var(--black);
+    margin: 0px -3px;
+    transition: 0.4s;
+    text-decoration: none;
+    font-size: 40px;
+    background-color: var(--pricolor);
+    padding: 6px;
+    border-right: 5px solid var(--black);
+    border-bottom: 5px solid var(--black);
+    border-radius: 10px 0px;
+}
+
+#user-name:hover {
+    background-color: var(--white);
+}
+
+#top-icon {
+    float: right;
+    position: relative;
+    transition: 0.2s;
+    background-color: var(--pricolor);
+    padding: 8px 6px;
+    font-size: 40px;
+    border: 5px solid var(--black);
+    border-radius: 10px;
+    margin-top: -8px;
+    margin-right: 20px;
+    color: var(--black);
+}
+
+#top-icon:hover {
+    background-color: var(--white);
+}
+
+
+.nav-block-space {
+    background-color: var(--dgray);
+    border-radius: 20px;
+}
+
+.nav-block-space a {
+    visibility: hidden;
+}
+
+
+/* --------------------------------------- index */
+
+
+.tile-col {
+    border: 6px solid var(--black);
+    color: black;
+    transition: 0.4s;
+    float: left;
+    width: 30%;
+    height: 250px;
+    margin: 2% 1.6%;
+    text-align: center;
+    border-radius: 20px;
+    background-color: var(--pricolor);
+}
+
+.tile-col:hover {
+    background-color: var(--pricolor);
+    /* border: 6px solid var(--pricolor); */
+}
+
+.top-tile-text {
+    margin-top: 55px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+.tile-row {
+    border-top: 5px solid var(--pricolor);
+    border-bottom: 5px solid var(--pricolor);
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--dgray);
+}
+
+.tile-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.front-page-text {
+    padding: 10px;
+    /* margin-top: 0px; */
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+
+/* --------------------------------------- settings */
+
+#alert-icon {
+    color: red;
+    font-size: 30px;
+}
+
+#alert-text{
+    font-size: 12px;
+    color: red;
+}
+
+.settings-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.settings-container h1 {
+    color: white;
+}
+
+.settings-container h3{
+    color: rgba(255, 255, 255, 0.418);
+}
+
+.settings-container hr {
+    border: 1px solid var(--pricolor);
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.asign-change-name-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    width: 92%;
+}
+
+.asign-change-name-wrapper input[type=text] {
+    margin-left: 0px;
+    width: 50%;
+}
+
+.asign-change-name-wrapper input[type=submit] {
+    width: 50%;
+    height: 50px;
+    background-color: var(--pricolor);
+    font-size: 20px;
+    color: var(--black);
+    font-weight: 900;
+    border: 5px solid var(--pricolor);
+    transition: 0.4s;
+}
+
+.asign-change-name-wrapper input[type=submit]:hover {
+    background-color: var(--dgray);
+    color: white;
+    border: 3px solid var(--pricolor);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.theme-settings {
+    width: 46%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.theme-color-picker-wrapper {
+    height: 300px;
+}
+
+.theme-color-picker-wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.theme-box {
+    float: left;
+    width: 33.33%;
+    padding: 2px;
+}
+
+.theme-box button h5 {
+    font-weight: 900;
+    position: relative;
+    top: -60px;
+    font-size: 25px;
+    color: var(--dgray);
+}
+
+.theme-box button {
+    cursor: pointer;
+    background-color: var(--pricolor);
+    width: 100%;
+    height: 300px;
+    color: var(--pricolor);
+    border: 5px solid var(--pricolor);
+    transition: 0.4s;
+}
+
+.theme-box button:hover {
+    background-color: var(--dgray);
+}
+
+.theme-box button:hover h5 {
+    color: white;
+}
+
+.preview-menu {
+    transform: scale(1.6);
+    position: relative;
+    top: -50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30px;
+    height: 135px;
+    color: var(--black);
+    border: 1px solid var(--dgray);
+    border-radius: 8px;
+}
+
+.yellow {
+    background-color: #fbc01a;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.pink {
+    background-color: pink;
+}
+
+
+.preview-menu-icon {
+    padding: 6px 2.1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.add-game-wrapper .add-game-row {
+    margin-left: 4px;
+}
+
+.add-game-wrapper select, input[type=text], input[type=number] {
+    background-color: var(--dgray);
+    border: 3px solid var(--pricolor);
+    width: 15.3%;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    font-weight: 900;
+    margin-left: -3px;
+}
+
+.add-game-wrapper input[type=submit] {
+    width: 45.9%;
+    height: 50px;
+    background-color: var(--pricolor);
+    font-size: 20px;
+    color: var(--black);
+    font-weight: 900;
+    border: 5px solid var(--pricolor);
+    transition: 0.4s;
+    margin-bottom: 50px;
+}
+
+.add-game-wrapper input[type=submit]:hover {
+    background-color: var(--dgray);
+    color: white;
+    border: 3px solid var(--pricolor);
+    cursor: pointer;
+}
+
+
+/* --------------------------------------- general */
+/* --------------------------------------- general */
+/* --------------------------------------- general */
+/* --------------------------------------- general */
+/* --------------------------------------- general */
+/* --------------------------------------- general */
+/* --------------------------------------- general */
+/* --------------------------------------- general */
+/* --------------------------------------- general */
