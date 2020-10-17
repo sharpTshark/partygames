@@ -56,6 +56,4 @@
 
 <?php
     require 'inc/footer.php';
-
-    echo 'werktttt';
 ?>

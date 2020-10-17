@@ -7,9 +7,6 @@
 
     $rawip = preg_replace('/[^0-9]/', '', $ip);
 
-    $ipaddress = getenv("REMOTE_ADDR") ; 
-    Echo "Your IP Address is " . $ipaddress; 
-
 ?> 
 
 <!-- ----------DataBase Connections---------- -->
