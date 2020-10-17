@@ -191,26 +191,6 @@ if (!empty($_POST)) {
             }
         }
 
-        if (!empty($_POST[''])) {
-        
-        }
-
-        if (!empty($_POST[''])) {
-        
-        }
-
-        if (!empty($_POST[''])) {
-        
-        }
-
-        if (!empty($_POST[''])) {
-        
-        }
-
-        if (!empty($_POST[''])) {
-        
-        }
-
     require 'inc/footer.php';
 
 ?>
