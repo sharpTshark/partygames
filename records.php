@@ -1,11 +1,9 @@
 <?php
-    require 'inc/header.php';
-    require 'inc/navbar.php';
-    require 'inc/ip.php';
+    require 'header.php';
 ?>
 
 
 
 <?php
-    require 'inc/footer.php';
+    require 'footer.php';
 ?>

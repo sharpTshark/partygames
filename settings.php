@@ -1,7 +1,5 @@
 <?php
-    require 'inc/header.php';
-    require 'inc/navbar.php';
-    require 'inc/ip.php';
+    require 'header.php';
 ?>
 
     <div class="container">
@@ -191,6 +189,6 @@ if (!empty($_POST)) {
             }
         }
 
-    require 'inc/footer.php';
+    require 'footer.php';
 
 ?>

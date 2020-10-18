@@ -1,9 +1,8 @@
 <?php
-    require 'inc/header.php';
-    require 'inc/navbar.php';
+    require 'header.php';
 ?>
 
 
 <?php
-    require 'inc/footer.php';
+    require 'footer.php';
 ?>
