@@ -9,7 +9,7 @@ function handlePost($post, $rawip) {
         $sql = "UPDATE users SET theme='$theme' WHERE ip='$rawip'";
         if(mysqli_query($conn, $sql)){
             header('Location: ../index.php');
-        }
+        } else {   echo("Error description: " . $sql -> error);  }
     }
 // ---------------------New user with Nickname---------------------
     if (!empty($_POST['asign-NickName'])) {
