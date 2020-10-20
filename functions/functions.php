@@ -27,7 +27,7 @@ function handlePost($post, $rawip) {
         $sql = "UPDATE users SET theme='$theme' WHERE ip='$rawip'";
         if(mysqli_query($conn, $sql)){
             header('Location: ./index.php');?>
-            <meta http-equiv="refresh" content="1; url=http://www.coendenheijer.nl"><?php
+            <meta http-equiv="refresh" content="1; url=https://www.coendenheijer.nl/partygames/"><?php
         }
     }
 // ---------------------New user with Nickname---------------------
@@ -35,7 +35,8 @@ function handlePost($post, $rawip) {
         $nickname = $_POST['asign-NickName'];
         $sql = "INSERT INTO users (name, ip, online, theme, roomid) VALUES ('$nickname', '$rawip', '0', '', '0')";
         if(mysqli_query($conn, $sql)){
-            header('Location: ../index.php');
+            header('Location: ../index.php');?>
+            <meta http-equiv="refresh" content="1; url=https://www.coendenheijer.nl/partygames/"><?php
         }
     }
 // ---------------------Update user Nickname---------------------
@@ -43,7 +44,8 @@ function handlePost($post, $rawip) {
         $nickname = $_POST['update-NickName'];
         $sql = "UPDATE users SET name='$nickname' WHERE ip=$rawip";
         if(mysqli_query($conn, $sql)){
-            header('Location: ../index.php');
+            header('Location: ../index.php');?>
+            <meta http-equiv="refresh" content="1; url=https://www.coendenheijer.nl/partygames/"><?php
         }
     }
 // ---------------------Create Room---------------------
@@ -75,7 +77,8 @@ function handlePost($post, $rawip) {
             }
         } else {
             echo '<h1>Room not found</h1>';
-            header( "refresh:1;url=../joinroom.php" );
+            header( "refresh:1;url=../joinroom.php" );?>
+            <meta http-equiv="refresh" content="1; url=https://www.coendenheijer.nl/partygames/"><?php
         }
     }
 }
@@ -88,7 +91,8 @@ function checkRoom() {
     $sql = "SELECT * FROM rooms WHERE roomname='$roomname'";
     $result = mysqli_query($conn, $sql);
     if(mysqli_num_rows($result) < 1)  {
-        header('Location: index.php');
+        header('Location: index.php');?>
+        <meta http-equiv="refresh" content="1; url=https://www.coendenheijer.nl/partygames/"><?php
     }
 }
 
@@ -120,7 +124,8 @@ function checkUser($rawip, $url) {
     $sql = "SELECT * FROM users WHERE ip='$rawip'";
     $result = mysqli_query($conn, $sql);
     if(mysqli_num_rows($result) < 1)  {
-        header('Location: login.php');
+        header('Location: login.php');?>
+        <meta http-equiv="refresh" content="1; url=https://www.coendenheijer.nl/partygames/"><?php
     }
 }
 
