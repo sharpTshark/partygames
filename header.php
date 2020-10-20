@@ -14,13 +14,13 @@
 
     <?php
         $url = 'http://coendenheijer.nl/partygames/';
-
-
+        
         require 'inc/navbar.php';
         require 'inc/conn.php';
         require 'inc/ip.php';
-
-
+        require 'functions/functions.php';
+        
+        checkUser($rawip, $url);
     ?>
 
 </head>

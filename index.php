@@ -18,7 +18,7 @@
         <h4>Get started below by joining or rather host a room.</h4>
     </div>
     <div class="tile-row">
-        <a href="">
+        <a href="joinroom.php">
             <div class="tile-col">
                 <h1>
                     JOIN
@@ -28,7 +28,7 @@
             </div>
         </a>
 
-        <a href="">
+        <a href="createroom.php">
             <div class="tile-col">
                 <h1>
                     HOST

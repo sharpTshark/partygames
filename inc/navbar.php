@@ -1,6 +1,6 @@
 <?php
 
-require 'inc/conn.php';
+require 'conn.php';
 include 'inc/ip.php';
 
 ?>
@@ -19,8 +19,7 @@ $sql = "SELECT * FROM users WHERE ip='$rawip'";
 $result = mysqli_query($conn, $sql);
     if(mysqli_num_rows($result) == 1) {
         while($row = mysqli_fetch_assoc($result)) {
-            
-?>
+        ?>
         --pricolor: <?php 
         if ($row["theme"] == "") {echo '#fbc01a';} else {
             echo $row["theme"];}}
@@ -32,7 +31,7 @@ $result = mysqli_query($conn, $sql);
 </style>
 
 
-        <div class="nav-block-open"><a id="user-name" href="settings.php?action=NameSetting"> <?php
+        <div class="nav-block-open"><a id="user-name" href="profile.php"> <?php
 
         $sql = "SELECT * FROM users WHERE ip='$rawip'";
         $result = mysqli_query($conn, $sql);
