@@ -1,23 +1,5 @@
 <?php
 
-    $servername = "localhost";
-    $username = "coendenh_partygames";
-    $password = "partygames";
-    $dbname = "coendenh_partygames";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-    }
-
-?>
-
-
-<?php
-
 
 function handlePost($post, $rawip) {
     // ---------------------Theme color---------------------
@@ -63,7 +45,7 @@ function handlePost($post, $rawip) {
                 <meta http-equiv="refresh" content="0; url=https://www.coendenheijer.nl/partygames/<?php echo 'room.php?id=' . $row['id'] . '&roomname=' . $row['roomname']; ?>"><?php
                 }
             } 
-        } else {echo 'werkt niett';}
+        }
     }
 // ---------------------JOin a Room---------------------
     if (isset($_POST['join-room'])) {
