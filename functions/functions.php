@@ -2,6 +2,7 @@
 
 
 function handlePost($post, $rawip) {
+    echo 'functie word aangeroepen';
     // ---------------------Theme color---------------------
     global $conn;
     if (isset($post['theme-color'])) {
@@ -9,12 +10,12 @@ function handlePost($post, $rawip) {
         $sql = "UPDATE users SET theme='$theme' WHERE ip='$rawip'";
         if(mysqli_query($conn, $sql)){
             header('Location: ../index.php');
-        } else {   echo("Error description: " . $sql -> error);  }
+        }
     }
 // ---------------------New user with Nickname---------------------
     if (!empty($_POST['asign-NickName'])) {
         $nickname = $_POST['asign-NickName'];
-        $sql = "INSERT INTO users (name, ip, online, theme) VALUES ('$nickname', '$rawip', '0', '')";
+        $sql = "INSERT INTO users (name, ip, online, theme, roomid) VALUES ('$nickname', '$rawip', '0', '', '0')";
         if(mysqli_query($conn, $sql)){
             header('Location: ../index.php');
         }
@@ -97,6 +98,7 @@ function checkRoom() {
 
 // ---------------------Check if user is new or not---------------------
 function checkUser($rawip, $url) {
+    echo 'check the user';
     global $conn;
     $sql = "SELECT * FROM users WHERE ip='$rawip'";
     $result = mysqli_query($conn, $sql);
