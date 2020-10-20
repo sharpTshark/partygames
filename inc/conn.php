@@ -17,9 +17,9 @@ $dbname = "partygames";
 <?php
 
     $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "partygames";
+    $username = "coendenh_partygames";
+    $password = "partygames";
+    $dbname = "coendenh_partygames";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
