@@ -2,9 +2,9 @@
 
 
 function handlePost($post, $rawip) {
-    echo 'functie word aangeroepen';
     // ---------------------Theme color---------------------
     global $conn;
+    echo $conn;
     if (isset($post['theme-color'])) {
         $theme = $post['theme-color'];
         $sql = "UPDATE users SET theme='$theme' WHERE ip='$rawip'";
@@ -98,7 +98,6 @@ function checkRoom() {
 
 // ---------------------Check if user is new or not---------------------
 function checkUser($rawip, $url) {
-    echo 'check the user';
     global $conn;
     $sql = "SELECT * FROM users WHERE ip='$rawip'";
     $result = mysqli_query($conn, $sql);
