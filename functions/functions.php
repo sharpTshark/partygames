@@ -17,8 +17,9 @@ function handlePost($post, $rawip) {
         $nickname = $_POST['asign-NickName'];
         $sql = "INSERT INTO users (name, ip, online, theme, roomid) VALUES ('$nickname', '$rawip', '0', '', '0')";
         if(mysqli_query($conn, $sql)){
+            echo 'DDDD';
             header('Location: ../index.php');?>
-            <meta http-equiv="refresh" content="0; url=https://www.coendenheijer.nl/partygames/"><?php
+            <meta http-equiv="refresh" content="1; url=https://www.coendenheijer.nl/partygames/"><?php
         }
     }
 // ---------------------Update user Nickname---------------------
