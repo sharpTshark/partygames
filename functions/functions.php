@@ -22,13 +22,12 @@
 function handlePost($post, $rawip) {
     // ---------------------Theme color---------------------
     global $conn;
-    var_dump($conn);
     if (isset($post['theme-color'])) {
         $theme = $post['theme-color'];
         $sql = "UPDATE users SET theme='$theme' WHERE ip='$rawip'";
         if(mysqli_query($conn, $sql)){
             header('Location: ../index.php');
-        }
+        } else { echo mysqli_error($conn); }
     }
 // ---------------------New user with Nickname---------------------
     if (!empty($_POST['asign-NickName'])) {
