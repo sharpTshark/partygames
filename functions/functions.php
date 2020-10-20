@@ -6,7 +6,7 @@ function handlePost($post, $rawip) {
     global $conn;
     if (isset($post['theme-color'])) {
         $theme = $post['theme-color'];
-        $sql = "UPDATE users SET theme='$theme' WHERE ip=$rawip";
+        $sql = "UPDATE users SET theme='$theme' WHERE ip='$rawip'";
         if(mysqli_query($conn, $sql)){
             header('Location: ../index.php');
         }
