@@ -1,10 +1,28 @@
 <?php
 
+    // $servername = "localhost";
+    // $username = "coendenh_partygames";
+    // $password = "partygames";
+    // $dbname = "coendenh_partygames";
+
+    // // Create connection
+    // $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // // Check connection
+    // if ($conn->connect_error) {
+    // die("Connection failed: " . $conn->connect_error);
+    // }
+
+?>
+
+
+<?php
+
 
 function handlePost($post, $rawip) {
     // ---------------------Theme color---------------------
     global $conn;
-    echo $conn;
+    var_dump($conn);
     if (isset($post['theme-color'])) {
         $theme = $post['theme-color'];
         $sql = "UPDATE users SET theme='$theme' WHERE ip='$rawip'";
