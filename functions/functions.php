@@ -26,7 +26,8 @@ function handlePost($post, $rawip) {
         $theme = $post['theme-color'];
         $sql = "UPDATE users SET theme='$theme' WHERE ip='$rawip'";
         if(mysqli_query($conn, $sql)){
-            header('Location: ./index.php');
+            header('Location: ./index.php');?>
+            <meta http-equiv="refresh" content="1; url=<?php echo $url ?>"> <?php
         }
     }
 // ---------------------New user with Nickname---------------------
