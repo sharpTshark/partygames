@@ -27,7 +27,7 @@ function handlePost($post, $rawip) {
         $sql = "UPDATE users SET theme='$theme' WHERE ip='$rawip'";
         if(mysqli_query($conn, $sql)){
             header('Location: ./index.php');?>
-            <meta http-equiv="refresh" content="1; url=https://www.coendenheijer.nl/partygames/"><?php
+            <meta http-equiv="refresh" content="0; url=https://www.coendenheijer.nl/partygames/"><?php
         }
     }
 // ---------------------New user with Nickname---------------------
@@ -36,7 +36,7 @@ function handlePost($post, $rawip) {
         $sql = "INSERT INTO users (name, ip, online, theme, roomid) VALUES ('$nickname', '$rawip', '0', '', '0')";
         if(mysqli_query($conn, $sql)){
             header('Location: ../index.php');?>
-            <meta http-equiv="refresh" content="1; url=https://www.coendenheijer.nl/partygames/"><?php
+            <meta http-equiv="refresh" content="0; url=https://www.coendenheijer.nl/partygames/"><?php
         }
     }
 // ---------------------Update user Nickname---------------------
@@ -45,7 +45,7 @@ function handlePost($post, $rawip) {
         $sql = "UPDATE users SET name='$nickname' WHERE ip=$rawip";
         if(mysqli_query($conn, $sql)){
             header('Location: ../index.php');?>
-            <meta http-equiv="refresh" content="1; url=https://www.coendenheijer.nl/partygames/"><?php
+            <meta http-equiv="refresh" content="0; url=https://www.coendenheijer.nl/partygames/"><?php
         }
     }
 // ---------------------Create Room---------------------
@@ -59,7 +59,8 @@ function handlePost($post, $rawip) {
 
             if(mysqli_num_rows($result) > 0)  {
                 while($row = mysqli_fetch_assoc($result)) {
-                header('Location: ../room.php?id=' . $row['id'] . '&roomname=' . $row['roomname']);
+                header('Location: ../room.php?id=' . $row['id'] . '&roomname=' . $row['roomname']); ?>
+                <meta http-equiv="refresh" content="0; url=https://www.coendenheijer.nl/partygames/<?php echo 'room.php?id=' . $row['id'] . '&roomname=' . $row['roomname']; ?>"><?php
                 }
             } 
         } else {echo 'werkt niett';}
@@ -73,7 +74,8 @@ function handlePost($post, $rawip) {
         if(mysqli_num_rows($result) == 1)  {
             echo 'ROOM GEVONDEN';
             while($row = mysqli_fetch_assoc($result)) {
-            header('Location: ../room.php?id=' . $row['id'] . '&roomname=' . $row['roomname']);
+            header('Location: ../room.php?id=' . $row['id'] . '&roomname=' . $row['roomname']); ?>
+            <meta http-equiv="refresh" content="1; url=https://www.coendenheijer.nl/partygames/<?php echo 'room.php?id=' . $row['id'] . '&roomname=' . $row['roomname']; ?>"><?php
             }
         } else {
             echo '<h1>Room not found</h1>';
@@ -92,7 +94,7 @@ function checkRoom() {
     $result = mysqli_query($conn, $sql);
     if(mysqli_num_rows($result) < 1)  {
         header('Location: index.php');?>
-        <meta http-equiv="refresh" content="1; url=https://www.coendenheijer.nl/partygames/"><?php
+        <meta http-equiv="refresh" content="0; url=https://www.coendenheijer.nl/partygames/joinroom.php"><?php
     }
 }
 
@@ -125,7 +127,7 @@ function checkUser($rawip, $url) {
     $result = mysqli_query($conn, $sql);
     if(mysqli_num_rows($result) < 1)  {
         header('Location: login.php');?>
-        <meta http-equiv="refresh" content="1; url=https://www.coendenheijer.nl/partygames/login.php"><?php
+        <meta http-equiv="refresh" content="0; url=https://www.coendenheijer.nl/partygames/login.php"><?php
     }
 }
 
