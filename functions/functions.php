@@ -125,7 +125,7 @@ function checkUser($rawip, $url) {
     $result = mysqli_query($conn, $sql);
     if(mysqli_num_rows($result) < 1)  {
         header('Location: login.php');?>
-        <meta http-equiv="refresh" content="1; url=https://www.coendenheijer.nl/partygames/"><?php
+        <meta http-equiv="refresh" content="1; url=https://www.coendenheijer.nl/partygames/login.php"><?php
     }
 }
 
